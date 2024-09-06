@@ -20,18 +20,17 @@ const sessionsSchema = new Schema({
     type: String,
   },
   startTime: {
+    type: Date,
+    default: Date.now,
+  },
+  lastLogin: {
+    type: Date,
+    default: Date.now,
+  },
+  accessToken: {
     type: String,
-    required: true,
-  },
-  expirationTime: {
-    type: Date,
-    default: Date.now,
-  },
-  createdDate: {
-    type: Date,
-    default: Date.now,
   },
 });
 
-const Sessions = mongoose.model("Sessions", sessionsSchema);
-module.exports = Sessions;
+const Session = mongoose.model("Session", sessionsSchema);
+module.exports = Session;

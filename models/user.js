@@ -14,7 +14,7 @@ const usersSchema = new Schema({
     type: String,
     required: true,
   },
-  date: {
+  createdDate: {
     type: Date,
     default: Date.now,
   },
@@ -22,15 +22,6 @@ const usersSchema = new Schema({
     type: String,
     required: true,
   },
-  userSessions: [
-    {
-      _id: false,
-      sessionId: {
-        type: mongoose.Schema.ObjectId,
-        ref: "Sessions",
-      },
-    },
-  ],
 });
 
 const User = mongoose.model("User", usersSchema);
