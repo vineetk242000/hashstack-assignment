@@ -2,7 +2,7 @@
 
 ## Default urls:
 
-- {bse_uri}/user/signup - POST
+- {base_uri}/user/signup - POST
 
   Request structure:
   {
@@ -12,20 +12,22 @@
   "mobile":XXXXXXXX
   }
 
-- {bse_uri}/user/login - POST
+- {base_uri}/user/login - POST
   Request structure:
   {
   "userName":"superadmin",
   "password":"password",
   }
 
-- {bse_uri}/user/info - POST (requires super_admin user level)
+- {base_uri}/user/info - POST (requires super_admin user level)
   Request structure:
   {
   "mobile":XXXXXXX
   }
 
-## Instalation (I could have added docker for this)
+## Instalation
+
+(I could have added docker for this.)
 
 1. Clone Git repository
 2. Add local .env file
