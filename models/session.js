@@ -23,10 +23,6 @@ const sessionsSchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  lastLogin: {
-    type: Date,
-    default: Date.now,
-  },
   accessToken: {
     type: String,
   },
